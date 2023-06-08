@@ -4,3 +4,10 @@ we have the slides and code, run through that.
 
 We may need this cheatsheet: http://www.flutterbys.com.au/stats/downloads/slides/figure/factors.pdf
 
+ Empirical CDF (ECDF):The empirical CDF is a step function that asymptotically approaches 0 and 1 on the vertical Y-axis. It's empirical because it represents your observed values and the corresponding data percentiles. The step function increases by a percentage equal to 1/N for each observation in your dataset of N observations.
+ 
+ probability density function (PDF) to provide a relative likelihood: The Probability Density Function(PDF) defines the probability function representing the density of a continuous random variable lying between a specific range of values. In other words, the probability density function produces the likelihood of values of the continuous random variable.
+ 
+ cumulative distribution function (CDF): The cumulative distribution function (CDF) calculates the cumulative probability for a given x-value. Use the CDF to determine the probability that a random observation that is taken from the population will be less than or equal to a certain value.The cumulative distribution function (CDF) calculates the cumulative probability for a given x-value. Use the CDF to determine the probability that a random observation that is taken from the population will be less than or equal to a certain value.
+ 
+ 
