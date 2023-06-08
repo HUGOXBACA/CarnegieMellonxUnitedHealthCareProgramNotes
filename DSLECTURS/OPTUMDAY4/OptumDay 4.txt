@@ -1,0 +1,6 @@
+https://cmu-sure-2023.netlify.app/class/04-class.html
+
+we have the slides and code, run through that. 
+
+We may need this cheatsheet: http://www.flutterbys.com.au/stats/downloads/slides/figure/factors.pdf
+
