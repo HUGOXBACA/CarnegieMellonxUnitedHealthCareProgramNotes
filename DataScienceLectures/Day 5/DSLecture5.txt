@@ -1,3 +1,37 @@
 June 6th, 2023
 
 we need to install foreign packages every time. 
+Stats infrence: the theory, methods, and practice of forming judgments about the parameters of a population and the reliability of statistical relationships, typically on the basis of random sampling.
+
+Cuasal infrence: Causal inference is the process of determining the independent, actual effect of a particular phenomenon that is a component of a larger system.
+
+Dan Generative AI Talk
+
+What kinds of generative AI tools is optum developing? 
+  Are these tools buisness to business tools, patient tools, doctor diagnosis, pharamacological diagonosis? 
+    
+Will generative AI be used to help doctorcs make diagnosis ? 
+
+Autoregresivve NLP model: guesses the next next from input to layer to output. 
+
+Which technoogies are used to create these models? Langauages, libraries, frameworks, packages etc. 
+
+Does optum health use data from Data.gov ?
+
+Cost benefits analysis of Cognitive Assistans - this is one type of tool 
+
+Will generative AI be used on patient calls? 
+  Yes, Automatic Speech Recognition. Promosies or homework are things we detect
+   compare and contrast in real time a patients profile 
+   
+Patient Files can contain manny entries with manny different measurments. 
+Developer Productivtiy  - cost savings - move away from saas and propriety to open source
+Sentiment measurment - sickness, sad, mood, physc profile is a mdeical condition, does not reflecet sentiment on care services. 
+
+It seems the tools mentioned are customer service oriented, will there be tools in other domains such as pharamacologl diagnosis or preventable visits for patients with symptons such as comon cold ?
+
+Will  generative ai be able to provide persrciptions. perhaps for the most common symptoms. 
+
+Is healthcare AI considered a medical device? 
+
+Strong and Weak input sourcing - simple is better - 
