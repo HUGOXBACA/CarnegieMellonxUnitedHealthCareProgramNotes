@@ -1,0 +1,169 @@
+---
+title: "DSlecture5"
+output: html_document
+date: "2023-06-09"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#create dataset
+```{r}
+
+library(tidyverse)
+ohtani_batted_balls <- read_csv("https://shorturl.at/mnwL1")
+head(ohtani_batted_balls)
+```
+#Variables of interest: pitch_type and batted_ball_type - but how many levels does pitch_type have?
+```{r}
+table(ohtani_batted_balls$pitch_type)
+```
+#We can manually fct_recode pitch_type (see Chapter 15 of R for Data Science for more on factors)
+```{r}
+ohtani_batted_balls <- ohtani_batted_balls %>%
+  filter(pitch_type != "null") %>%
+  mutate(pitch_type = fct_recode( pitch_type,
+      "Changeup" = "CH"
+      ,
+      "Breaking ball" = "CU"
+      ,
+      "Fastball" = "FC"
+      ,
+      "Fastball" = "FF"
+      ,
+      "Fastball" = "FS"
+      ,
+      "Breaking ball" = "KC"
+      ,
+      "Fastball" = "SI"
+      ,
+      "Breaking ball" = "SL"))
+```
+
+#Inferencefor categoricaldata
+```{r}
+chisq.test(table(ohtani_batted_balls$pitch_type))
+```
+#2DCategoricalvisualization(== morebar charts!)
+#stacked
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = batted_ball_type,
+            fill = pitch_type)) +
+  geom_bar() + theme_bw()
+```
+
+#side by side 
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = batted_ball_type,
+              fill = pitch_type)) +
+  geom_bar(position = "dodge") + theme_bw()
+```
+
+#Stacked bar charts emphasize marginal distribution of x variable,
+#Side-by-side bar charts are useful to show the conditional distribution of fill variable given x,
+
+#Review of joint, marginal,andconditionalprobabilities
+```{r}
+proportions(table(ohtani_batted_balls$pitch_type, ohtani_batted_balls$batted_ball_type))
+```
+
+#BONUS: pivot_wider example
+```{r}
+install.packages('gt')
+require(plyr)
+require(dplyr)
+library(gt)
+ohtani_batted_balls %>%
+  group_by(batted_ball_type, pitch_type) %>%
+  summarize(joint_prob = n() / nrow(ohtani_batted_balls)) %>%
+  pivot_wider(names_from = batted_ball_type, values_from = joint_prob,
+              values_fill = 0)
+```
+
+#Inferencefor 2Dcategoricaldata
+```{r}
+chisq.test(table(ohtani_batted_balls$pitch_type, ohtani_batted_balls$batted_ball_type))
+```
+#Create a mosaic plot using base R
+```{r}
+mosaicplot(table(ohtani_batted_balls$pitch_type, ohtani_batted_balls$batted_ball_type),
+shade = TRUE, main = "Relationship between batted ball and pitch type?")
+```
+
+#Continuousbycategorical:side-by-sideandcolor
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = pitch_type,
+            y = exit_velocity)) +
+  geom_violin() +
+  geom_boxplot(width = .2) +
+  theme_bw()
+```
+
+
+```{r}
+
+```
+#Whatabout forhistograms?
+```{r}
+ohtani_batted_balls %>%
+ggplot(aes(x = exit_velocity,
+          fill = pitch_type)) +
+geom_histogram() +
+theme_bw() + theme(legend.position = "botto")
+```
+
+```{r}
+ohtani_batted_balls %>%
+ggplot(aes(x = exit_velocity,
+          fill = pitch_type)) +
+geom_histogram(alpha = .25, position = "ideal"
+theme_bw() + theme(legend.position = "botto"))
+```
+
+#Wecanalwaysfacet instead...
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = exit_velocity)) +
+  geom_histogram() +
+  theme_bw() +
+  facet_wrap(~ pitch_type, ncol = 2)
+```
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = exit_velocity)) +
+  geom_histogram() +
+  theme_bw() +
+  facet_grid(pitch_type ~., margins = TRUE)
+```
+#Facets makeiteasyto movebeyond 2D
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = pitch_type,
+              fill = batted_ball_type)) +
+  geom_bar() + theme_bw() +
+  facet_wrap(~ outcome, ncol = 5) +
+  theme(legend.position = "bottom")
+```
+
+#We make a scatterplot with geom_point()
+```{r}
+ohtani_batted_balls %>%
+ggplot(aes(x = exit_velocity,
+            y = launch_angle)) +
+geom_point() +
+theme_bw()
+```
+
+
+```{r}
+ohtani_batted_balls %>%
+  ggplot(aes(x = exit_velocity,
+              y = launch_angle,
+  color = batted_ball_type)) +
+  geom_point() +
+  theme_bw()
+```
+
