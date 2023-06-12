@@ -23,3 +23,22 @@ What is estimation?
    nature generates the tempature according to some probability density , so we need to genearte more assumptions. 
    nature , N(M,D), M is assumed. density has some perams. 
    stats is indeed ubjetive
+
+DS Demo
+back to histogram 
+Humble hisogram, continuouos graph, 0 - n, divide and conqure, then gives you bins with distance and shots per distance
+
+small bandwidth, very spikey. large bandwidth, 
+
+kernel Density 
+
+we need chouse a kernael function, continious weighting function, 
+  take a value, at weight 0 - highest , symettic function, further away less weight, so it says, is to locally approximate each point ie drop the same kernel at evey data point, 
+  resutling in a curve with each data point whos sum is one but the graph , viz, will have a greatest peak where the data is most clustered ie density. 
+  
+  _________...._____...................______....._______...___.._._._._.
+  
+            ++++     ++++++++++++++++++.     ++++.        +++   + + + + + 
+  Sloped are greatest where more pluses, histograms are square beucase we're adding up the squares of the graph. 
+  
+  if we pick a smooth kernel, we get one big 
