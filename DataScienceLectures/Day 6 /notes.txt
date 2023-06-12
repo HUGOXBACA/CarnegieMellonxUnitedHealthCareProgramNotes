@@ -1,0 +1,25 @@
+# june 12 2023
+
+DS Lecture
+Density Estimation: intuition & motivation
+
+What is Density? 
+  physics: mass of objects can be measured - this is important
+    which has more mass - hydrogen of a classroom or golf ball filled with osmium 
+      what changed - enviornment by volume, gold ball size or classroom size 
+      Density = mass/volume 
+      Continous variables has varibale density 
+      Probabilites, must follow two things: events must f(0,1), non negative & all probabilites in an event must add up to 1. 
+      why 1, becuase we set a fixed volume
+       Gausian density, ie bell curve, can lead to normal distrobution 
+       68-95-99.7 rule 
+       standard deviation - grouping of percentile 
+       Normal distrobution(mean, deviation)
+      
+What is estimation? 
+   whats the probability of tempature > 10 degrees? 
+   why not use limted sample? becuase it's not a complete picture, we need to build the picture
+   infrence -> 
+   nature generates the tempature according to some probability density , so we need to genearte more assumptions. 
+   nature , N(M,D), M is assumed. density has some perams. 
+   stats is indeed ubjetive
