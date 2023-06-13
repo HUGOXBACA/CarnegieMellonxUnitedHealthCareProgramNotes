@@ -42,3 +42,32 @@ we need chouse a kernael function, continious weighting function,
   Sloped are greatest where more pluses, histograms are square beucase we're adding up the squares of the graph. 
   
   if we pick a smooth kernel, we get one big 
+
+
+Presentation notes
+  pm for AOL 
+  
+  
+  kamal
+  
+  teegan
+    Program Manager
+    teacher beforehand
+    
+    Michael
+    from linkedin
+    
+    ha
+    
+    Michelle - consumer engineering
+    
+    Edward - 
+    
+    John - 13 yrs, data sceince and analytics, etc 
+    
+    Senior Director 23 yrs of united health care group 
+    
+    Carly - 6 yrs, associatr dir of afooradbility
+    
+    
+    
