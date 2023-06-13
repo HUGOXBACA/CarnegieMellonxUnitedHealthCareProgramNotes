@@ -1,0 +1,27 @@
+#june 13th 2023
+
+Clustering - K-means
+
+Unsupervised Learning
+
+unsupervised learning is suitable for problems that require the algorithms to identify and extract similarities between the inputs so that similar inputs can be categorised together. In contrast to supervised learning, unsupervised learning methods are suitable when the output variables (i.e the labels) are not provided.
+
+Supervised Learning
+In supervised learning, the dataset of interest contains the explanatory variables (also known as the input or features) as well as the target responses (also known as the output labels). Such algorithms attempt to learn a function that approximates the relationship between the feature values and the labels in a way that it’d be able to generalise well to new unseen data.
+
+What isclustering(akaclusteranalysis)?
+
+observations within clusters are more similar to each other,
+observations in different clusters are more different from each other
+How do we define distance / dissimilarity between observations?
+Euclidean distance between observations i and j 
+
+d(xi, xj) =Sqrt((Xi1 - Xj1)^2 + (Xip - Xjp)^2 )
+Euclidean space is the length of a line segment between the two points.
+The Euclidean is often the “default” distance used in e.g., K-nearest neighbors (classification) or K-means (clustering) to find the “k closest points” of a particular sample point.
+
+density is unsupervised 
+
+Lyod's Algo: K - means
+K means will converge 
+
