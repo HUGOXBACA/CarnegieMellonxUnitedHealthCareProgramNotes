@@ -25,3 +25,33 @@ density is unsupervised
 Lyod's Algo: K - means
 K means will converge 
 
+Data Engineering Lecture #2 
+  what are . files and what is their purpose? 
+  legacy term for system archetecture & config files 
+  copy - cp [what to where] + options
+  mv - move [what to where ] + options
+  rename mv [file] to [where + newname.withtype] 
+  mkdir - make dir [ options ] [namedir/namedir/..]
+  lines of a file 
+  wc [ options ] [ filename.type ]
+  head / tail is header and footer of a file 
+  history command shows you 10 prev commands
+  less, more to inspect a file
+  find , very sophisticated 
+  find Dekstop -maxdepth 2 -size +500k -size -10M
+  'find root_path -maxdepath 2 -size +500k -size -10m is between 500k to 10M'
+    find a file within the path 2 levels deep who's size 
+  
+  alias ll='ls -1'
+    instead of ls -ll , just customize to use ll
+     where to save this? 
+      we need to save, persistance, these configurable, .bashrc
+      ~/.bashrc
+      touch ~/.bashrc
+      here you need to save it in the home dir, 
+   alias ll="ls -l"
+   save in ~/.bashrc
+   typically, 3 chars of less
+   
+   
+  
