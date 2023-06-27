@@ -1,0 +1,14 @@
+MachineLearning with R - tidymodels
+
+parsnip simplifies model parameters and
+interfaces
+recipes enables feature engineering and
+preprocessing
+workflows allow you to store and execute
+steps together
+tune optimizes hyperparameters
+
+#1. Pick a model: in this case, all we need is linear regression, but we could be using e.g. random forests
+#2. Set the engine: which package should we look to for this method?
+#3. Set the mode (if needed): are we performing classification or regression?
+
