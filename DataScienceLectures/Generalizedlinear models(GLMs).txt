@@ -1,0 +1,6 @@
+Generalizedlinear models(GLMs)
+
+Why does this stuff matter ? 
+  Because linear regression, and generalized variants, make assumptions about how observed data are
+  distributed around the true regression line, conditional on a value of X
+  
